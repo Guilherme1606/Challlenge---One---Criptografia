@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challgente 1 - Criptografia</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho_Logo">
+            <img src="assets/Frame 6.png" alt="Logo alura">
+        </div>
+    </header>
+    <main class="apresentacao">
+        <section class="apresentacao_principal">
+            <div class="apresentacao_principal_area">
+                <textarea  id="caixa_texto" class="caixa_texto"  cols="30" rows="10" placeholder="Digite o seu texto ..."></textarea>
+            </div>
+            <img class="apresentacao_principal_aviso" src="assets/aviso.png" alt="imagem com aviso">
+            <div class="apresentacao_principal_botoes">
+                <a class="apresentacao__botao__azul" onclick="realizaCriptografia()">Criptografar</a>
+                <a class="apresentacao__botao__Branco" onclick="realizaDescriptografiacriptografia()">Descriptografar</a>
+            </div>
+        </section>
+        <section class="apresentacao_resultado">
+            <div class="apresentacao_principal_area">
+                <textarea id="apresentacao_principal_texto" class="caixa_texto"  cols="30" rows="10"></textarea>
+            </div>
+            <img id="foto" class="foto-principal" src="assets/High quality products 1 1.svg" alt="">
+            <h1 class="apresentacao_resultado_titulo">Nenhuma mensagem encontrada</h1>
+            <p class="apresentacao_resultado_paragrafo">Digite um texto que voce deseja criptografar ou descriptografar</p>
+            <a class="apresentacao_resultado__botao" onclick="CopiaConteudo()">Copiar</a>
+        </section>
+    </main>
+    <script src="criptografia.js" defer></script>
+</body>
+</html>
