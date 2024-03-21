@@ -27,14 +27,11 @@ function realizaCriptografia(){
 }
 
 function realizaDescriptografiacriptografia(){
-    let textoDescriptografado = resultadoTexto.value;
-        textoDescriptografado =  textoDescriptografado.replace('ai','a');
-        textoDescriptografado =  textoDescriptografado.replace('enter','e'); 
-        textoDescriptografado =  textoDescriptografado.replace('imes','i');
-        textoDescriptografado =  textoDescriptografado.replace('ober','o');
-        textoDescriptografado =  textoDescriptografado.replace('ufat','u');
-        resultadoTexto.value = textoDescriptografado; 
-        realizaDescriptografiacriptografia();   
+    let tamanhotexto = texto.value;
+    
+    for (let i= 0;i < tamanhotexto.length;i++){
+       realizaDescriptografia();
+    }      
 }
 
 function retornaTrocaCriptografia (valor){
@@ -53,6 +50,18 @@ function retornaTrocaCriptografia (valor){
     }
 }
 
+function realizaDescriptografia(){
+    let textoDescriptografado = texto.value;
+        textoDescriptografado =  textoDescriptografado.replace('ai','a');
+        textoDescriptografado =  textoDescriptografado.replace('enter','e'); 
+        textoDescriptografado =  textoDescriptografado.replace('imes','i');
+        textoDescriptografado =  textoDescriptografado.replace('ober','o');
+        textoDescriptografado =  textoDescriptografado.replace('ufat','u');
+        resultadoTexto.value = textoDescriptografado;
+        return resultadoTexto.value; 
+}
+
 function CopiaConteudo(){
     navigator.clipboard.writeText(resultadoTexto.value); 
+    resultadoTexto.value = '';
 }
